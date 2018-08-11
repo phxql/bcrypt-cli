@@ -5,7 +5,11 @@ plugins {
 group 'de.mkammerer.bcrypt-cli'
 version '1.0-SNAPSHOT'
 
+apply plugin: 'application'
+
 sourceCompatibility = 1.8
+mainClassName = 'de.mkammerer.bcryptcli.Application'
+applicationDefaultJvmArgs = ['-Xms16M', '-Xmx16M', '-XX:+UseSerialGC']
 
 repositories {
     mavenCentral()
